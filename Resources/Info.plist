@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>PSD字体打包</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Photoshop 文档</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.adobe.photoshop-image</string>
+				<string>com.adobe.photoshop-large-image</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>psb</string>
+				<string>psd</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Photoshop 大型文档</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>文件夹</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>None</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.folder</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>PSDFontPack</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.tian.psdfontpack</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>PSD字体打包</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.5</string>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.graphics-design</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>13.0</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>读取你拖进来的 PSD，并把字体压缩包保存在 PSD 旁边。</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>读取你拖进来的 PSD，并把字体压缩包保存在 PSD 旁边。</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>读取你拖进来的 PSD，并把字体压缩包保存在 PSD 旁边。</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>内部工具 · 免费分享</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>读取你拖进来的 PSD，并把字体压缩包保存在 PSD 旁边。</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>读取你拖进来的 PSD，并把字体压缩包保存在 PSD 旁边。</string>
+</dict>
+</plist>
