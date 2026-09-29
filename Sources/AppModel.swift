@@ -33,7 +33,7 @@ final class AppModel: ObservableObject {
         autoPack = d.object(forKey: "autoPack") as? Bool ?? true
         autoDownload = d.object(forKey: "autoDownload") as? Bool ?? true
         installDownloaded = d.bool(forKey: "installDownloaded")
-        includeSystem = d.bool(forKey: "includeSystem")
+        includeSystem = d.object(forKey: "includeSystem") as? Bool ?? true
         includePSD = d.object(forKey: "includePSD") as? Bool ?? true
         separatePackages = d.bool(forKey: "separatePackages")
     }

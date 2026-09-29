@@ -6,7 +6,7 @@ enum CLI {
     用法：PSDFontPack --cli [选项] <PSD/PSB 文件或文件夹>…
       --check            只检查，不下载、不打包
       --no-download      缺失字体不自动下载
-      --include-system   Mac 系统字体也打包
+      --no-system        不打包 Mac 系统字体（苹方等，默认打包）
       --no-psd           包里只放字体
       --library <目录>   缺失字体先从这个字体库文件夹里找（可写多次；默认用 App 里设置的字体库）
       --separate         多个 PSD 各打一个包（默认合并）
@@ -16,7 +16,7 @@ enum CLI {
 
     static func run(_ args: [String]) -> Never {
         var check = false, download = true, separate = false
-        var options = PackOptions()
+        var options = PackOptions(includeSystem: true)
         var outDir: URL?
         var inputs: [URL] = []
         var libraries: [String] = []
@@ -26,6 +26,7 @@ enum CLI {
             case "--check": check = true
             case "--no-download": download = false
             case "--include-system": options.includeSystem = true
+            case "--no-system": options.includeSystem = false
             case "--no-psd": options.includePSD = false
             case "--separate": separate = true
             case "--library": if let d = it.next() { libraries.append(URL(fileURLWithPath: (d as NSString).expandingTildeInPath).path) }

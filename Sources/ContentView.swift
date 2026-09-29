@@ -293,8 +293,8 @@ struct ContentView: View {
             Divider()
             Toggle("压缩包里包含 PSD", isOn: $model.includePSD)
             Toggle("多个 PSD 时每个单独打一个包", isOn: $model.separatePackages)
-            Toggle("打包 Mac 系统字体", isOn: $model.includeSystem)
-            Text("对方用 Windows 时勾选。注意：苹果字体的授权仅限在苹果设备上使用")
+            Toggle("打包 Mac 系统字体（苹方等）", isOn: $model.includeSystem)
+            Text("对方用 Windows 时必须打开，否则会缺苹方等字体。注意：苹果字体的授权仅限在苹果设备上使用")
                 .font(.caption).foregroundStyle(.secondary)
                 .padding(.leading, 20).padding(.top, -6)
         }
@@ -312,7 +312,7 @@ struct ContentView: View {
         if model.installDownloaded { s.append("补充的字体装到本机") }
         if !model.includePSD { s.append("不含 PSD") }
         if model.separatePackages { s.append("每个 PSD 单独打包") }
-        if model.includeSystem { s.append("含系统字体") }
+        if !model.includeSystem { s.append("不含系统字体") }
         return s.joined(separator: " · ")
     }
 

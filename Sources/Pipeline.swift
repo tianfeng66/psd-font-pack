@@ -172,6 +172,9 @@ enum Pipeline {
                     lines.append("      文件：\(arc)" + (f.download.map { "   来源：\($0.source)" } ?? ""))
                 }
                 if let note = f.download?.note, !note.isEmpty { lines.append("      ⚠ \(note)") }
+                if sec == .packed, let k = f.found?.kind, k == .system || k == .macDownload {
+                    lines.append("      说明：Mac 系统自带字体，已一并打包，对方用 Windows 也能正常显示")
+                }
                 lines.append("      用于：\(f.usageLine(multi: multi, psdNames: a.psdNames, only: only))")
                 if sec == .missing {
                     if let err = f.downloadError { lines.append("      自动下载：\(err)") }
